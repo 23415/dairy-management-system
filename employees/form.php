@@ -1,0 +1,42 @@
+<a href='index.php' class='btn btn-primary'>Back To Employees</a>
+<form action='' method='POST'> 
+    <div class="control-group"> 
+        <label class="control-label" for="e_name">Name:</label >
+        <div class="controls">                
+            <input class="input-xlarge" type="text" name='e_name' value= >
+        </div> 
+    </div>
+    <div class="control-group">    
+        <label class="control-label" for="e_mail">E-Mail:</label >
+        <div class="controls">
+            <input class="input-xlarge" type="email" name='e_mail' value=  > 
+        </div> 
+    </div>
+    <div class="control-group">    
+        <label class="control-label" for="e_pass">Pass:</label >
+        <div class="controls">  
+            <input class="input-xlarge" type="text" name='e_pass' value= > 
+        </div> 
+    </div>
+    <div class="control-group">     
+        <label class="control-label" for="e_role">Role:</label > 
+        <div class="controls">            
+<!--            <input class="input-xlarge" type="text" name='e_role' value='<?php echo stripslashes($row['e_role']) ?>' /> -->
+             <select class="input-xlarge" name='e_role'>  
+               <option <?php echo  $selected= $selected ?>>clerk</option> 
+               <option <?php echo  $selected= $selected ?>>Supervisor</option>
+               <option <?php echo  $selected= $selected ?>>Manager</option>
+            </select> 
+        </div> 
+    </div>
+    <div class="control-group">    
+        <label class="control-label" for="e_payroll_no">Payroll No:</label >   
+        <div class="controls">        
+            <input class="input-xlarge" type="text" name='e_payroll_no' value=  > 
+        </div>
+    </div>
+    <div class="control-group">    
+        <input class="btn btn-large btn-success" type='submit' value='Save' />
+        <input type='hidden' value='1' name='submitted' /> 
+    </div>
+</form>
